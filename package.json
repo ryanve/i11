@@ -1,0 +1,36 @@
+{
+  "name": "i11",
+  "version": "0.0.0",
+  "description": "x11 color names",
+  "main": "i11.js",
+  "license": "0BSD",
+  "homepage": "https://github.com/ryanve/i11",
+  "scripts": {
+    "build": "node save",
+    "save": "node save",
+    "pretest": "cat i11.txt",
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanve/i11.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanve/i11/issues"
+  },
+  "keywords": [
+    "names",
+    "color",
+    "colour",
+    "x11",
+    "colors",
+    "colours",
+    "named-colors"
+  ],
+  "devDependencies": {
+    "eol": "^0.9.1",
+    "map-file": "^0.2.0",
+    "moment": "^2.29.1",
+    "ssv": "^4.1.1"
+  }
+}
