@@ -12,14 +12,8 @@ const col = txt => ssv.split(ssv.yolo(
   )).sort()
 
 const son = array => JSON.stringify(array, null, 2)
-
-const umd = array => `!function(globe, names) {
-  "freeze" in Object && Object.freeze(names)
-  typeof module != "undefined" && module.exports
-  ? module.exports = names
-  : (globe || window)["i11"] = names
-}(this, ${son(array)})`
-
+const common = array => `module.exports = ${son(array)}`
+const value = array => `var i11 = ${son(array)}`
 const li = c => `<li>${c}`
 
 const head = `<!DOCTYPE html>
@@ -71,7 +65,13 @@ map({
 map({
   from: "i11.txt",
   to: "i11.js",
-  map: txt => umd(col(txt))
+  map: txt => value(col(txt))
+})
+
+map({
+  from: "i11.txt",
+  to: "index.js",
+  map: txt => common(col(txt))
 })
 
 map({
