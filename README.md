@@ -1,6 +1,6 @@
 # i11 <br><q>i eleven</q>
 
-### [css named colors](https://www.w3.org/TR/css-color-4/#named-colors)
+### [CSS named colors](https://www.w3.org/TR/css-color-4/#named-colors)
 
 ### [text list](index.txt)
 
