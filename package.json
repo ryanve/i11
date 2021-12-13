@@ -1,9 +1,9 @@
 {
   "name": "i11",
   "version": "0.0.0",
-  "description": "x11 color names",
-  "main": "i11.js",
-  "license": "0BSD",
+  "description": "x11 color name data",
+  "main": "index.js",
+  "license": "Unlicense",
   "homepage": "https://github.com/ryanve/i11",
   "scripts": {
     "build": "node save",

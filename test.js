@@ -1,10 +1,10 @@
-const fs = require("fs")
-const ok = require("assert").ok
-const eol = require("eol")
-const i11 = require("./")
-const read = file => fs.readFileSync(file).toString()
-const son = JSON.parse(read("i11.json"))
-const txt = eol.split(read("i11.txt"))
+let fs = require("fs")
+let ok = require("assert").ok
+let eol = require("eol")
+let i11 = require("./")
+let read = file => fs.readFileSync(file).toString()
+let son = JSON.parse(read("i11.json"))
+let txt = eol.split(read("i11.txt"))
 
 ok(i11 instanceof Array)
 ok(son instanceof Array)

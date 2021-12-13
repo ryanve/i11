@@ -9,3 +9,9 @@
 ### [javascript array](i11.js)
 
 <code>console.dir(<strong>i11</strong>)</code>
+
+
+## edit
+
+1. edit via `i11.txt`
+2. resave via <code>node save</code>

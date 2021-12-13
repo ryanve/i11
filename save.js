@@ -1,9 +1,11 @@
-const moment = require("moment")
-const eol = require("eol")
-const map = require("map-file")
-const ssv = require("ssv")
+let moment = require("moment")
+let eol = require("eol")
+let map = require("map-file")
+let ssv = require("ssv")
 
-const col = txt => ssv.split(ssv.yolo(
+let li = txt => `<li>${txt}`
+let son = ray => JSON.stringify(ray, null, 2)
+let col = txt => ssv.split(ssv.yolo(
   eol.split(txt)
     .map(v => ssv.at(v, 0))
     .filter(ssv.count)
@@ -11,12 +13,7 @@ const col = txt => ssv.split(ssv.yolo(
     .join(" ")
   )).sort()
 
-const son = array => JSON.stringify(array, null, 2)
-const common = array => `module.exports = ${son(array)}`
-const value = array => `var i11 = ${son(array)}`
-const li = c => `<li>${c}`
-
-const head = `<!DOCTYPE html>
+let head = `<!DOCTYPE html>
 <html lang="en-US">
 <meta charset="utf-8">
 <title>i11 CSS named colors list</title>
@@ -28,7 +25,7 @@ const head = `<!DOCTYPE html>
 <link rel="help" href="https://github.com/ryanve/i11">
 `
 
-const body = array => `
+let body = array => `
 <header>
   <h1>CSS named colors</h1>
   Updated on <time datetime="${moment().format("YYYY-MM-DD")}">${moment().format("LL")}</time><br>
@@ -48,30 +45,12 @@ ${array.map(li).join("\n")}
 </ol>
 `
 
-const dom = array => head + body(array)
-
-map({
-  from: "i11.txt",
-  to: "i11.txt",
-  map: txt => col(txt).join("\n")
-})
+let dom = array => head + body(array)
 
 map({
   from: "i11.txt",
   to: "i11.json",
   map: txt => son(col(txt))
-})
-
-map({
-  from: "i11.txt",
-  to: "i11.js",
-  map: txt => value(col(txt))
-})
-
-map({
-  from: "i11.txt",
-  to: "index.js",
-  map: txt => common(col(txt))
 })
 
 map({
