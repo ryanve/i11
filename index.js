@@ -1,3 +1,4 @@
-let file = "i11.json"
+let file = "index.json"
 let fs = require("fs")
+
 module.exports = JSON.parse(fs.readFileSync(file))

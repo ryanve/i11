@@ -6,9 +6,12 @@
   "license": "Unlicense",
   "homepage": "https://github.com/ryanve/i11",
   "scripts": {
+    "prebuild": "npm install",
     "build": "node save",
+    "firefox": "open -a firefox index.html || start firefox index.html",
     "save": "node save",
-    "pretest": "cat i11.txt",
+    "start": "npm run firefox",
+    "pretest": "cat index.txt",
     "test": "node test"
   },
   "repository": {

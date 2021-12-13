@@ -18,10 +18,10 @@ let head = `<!DOCTYPE html>
 <meta charset="utf-8">
 <title>i11 CSS named colors list</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="silver">
-<meta name="color-scheme" content="dark light">
-<meta name="description" content="CSS named colors list aka X11 color names. Web colors dataset.">
-<link rel="stylesheet" href="web.css">
+<meta name="theme-color" content="gainsboro">
+<meta name="color-scheme" content="light">
+<meta name="description" content="CSS named colors list aka X11 color names. Web color names dataset.">
+<link rel="stylesheet" href="index.css">
 <link rel="help" href="https://github.com/ryanve/i11">
 `
 
@@ -29,12 +29,12 @@ let body = array => `
 <header>
   <h1>CSS named colors</h1>
   Updated on <time datetime="${moment().format("YYYY-MM-DD")}">${moment().format("LL")}</time><br>
-  Sourced from <a href="https://www.w3.org/TR/css-color-4/#named-colors">css-color-4</a><br>
+  Sourced from <a href="https://www.w3.org/TR/css-color-4/#named-colors">CSS Color Module Level 4</a><br>
   Total ${array.length} names<br>
   Data array in
-  <a href="i11.txt">txt</a>
-  <a href="i11.json">json</a>
-  <a href="i11.js">js</a> <br>
+  <a href="index.txt">text</a>
+  <a href="index.json">json</a>
+  <a href="index.js">node</a><br>
   On
   <a href="https://github.com/ryanve/i11">github</a>
   <a href="https://www.npmjs.com/package/i11">npm</a>
@@ -48,13 +48,13 @@ ${array.map(li).join("\n")}
 let dom = array => head + body(array)
 
 map({
-  from: "i11.txt",
-  to: "i11.json",
+  from: "index.txt",
+  to: "index.json",
   map: txt => son(col(txt))
 })
 
 map({
-  from: "i11.txt",
+  from: "index.txt",
   to: "index.html",
   map: txt => dom(col(txt))
 })

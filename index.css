@@ -19,6 +19,27 @@ html {
   color: black;
 }
 
-[href] {
-  color: mediumvioletred;
+::selection {
+  color: mistyrose;
+  background: darkviolet;
+}
+
+:link {
+  color: blueviolet;
+  background: mistyrose;
+}
+
+:visited {
+  color: darkviolet;
+  background: mistyrose;
+}
+
+:focus {
+  outline-width: thick;
+}
+
+@media (prefers-contrast: more) {
+  html {
+    background: seashell;
+  }
 }
