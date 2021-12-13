@@ -1,15 +1,20 @@
-# i11 <br><q>i eleven</q>
+# i11
 
-### [CSS named colors](https://www.w3.org/TR/css-color-4/#named-colors)
+[Online list ](https://ryanve.github.io/i11) of [CSS named colors](https://www.w3.org/TR/css-color-4/#named-colors)
 
-### [text list](index.txt)
+* [text list](index.txt)
+* [JSON array](index.json)
+* [HTML list](index.html)
+* [node](index.js)
+* [package](https://npm.im/i11)
 
-### [json array](index.json)
+```
+npm install i11
+```
 
-### [javascript array](index.js)
-
-<code>console.dir(<strong>i11</strong>)</code>
-
+```
+let array = require("i11")
+```
 
 ## edit
 
