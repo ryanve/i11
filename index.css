@@ -1,0 +1,45 @@
+html {
+  font-size: 20px;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+html {
+  background: gainsboro;
+  color: black;
+}
+
+::selection {
+  color: mistyrose;
+  background: darkviolet;
+}
+
+:link {
+  color: blueviolet;
+  background: mistyrose;
+}
+
+:visited {
+  color: darkviolet;
+  background: mistyrose;
+}
+
+:focus {
+  outline-width: thick;
+}
+
+@media (prefers-contrast: more) {
+  html {
+    background: seashell;
+  }
+}

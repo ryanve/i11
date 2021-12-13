@@ -1,0 +1,39 @@
+{
+  "name": "i11",
+  "version": "0.0.0",
+  "description": "x11 color name data",
+  "main": "index.js",
+  "license": "Unlicense",
+  "homepage": "https://github.com/ryanve/i11",
+  "scripts": {
+    "prebuild": "npm install",
+    "build": "node save",
+    "firefox": "open -a firefox index.html || start firefox index.html",
+    "save": "node save",
+    "start": "npm run firefox",
+    "pretest": "cat index.txt",
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanve/i11.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanve/i11/issues"
+  },
+  "keywords": [
+    "names",
+    "color",
+    "colour",
+    "x11",
+    "colors",
+    "colours",
+    "named-colors"
+  ],
+  "devDependencies": {
+    "eol": "^0.9.1",
+    "map-file": "^0.2.0",
+    "moment": "^2.29.1",
+    "ssv": "^4.1.1"
+  }
+}
